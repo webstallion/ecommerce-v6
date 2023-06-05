@@ -6,6 +6,15 @@
             height:700px;
             padding-top:200px;
         }
+        .custom-product{
+            height:700px;
+        }
+        img.slider-img{
+            height: 400px !important;
+        }
+        .slider-text{
+            color:#1c1c1a !important;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

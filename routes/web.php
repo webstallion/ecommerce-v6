@@ -15,13 +15,13 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
  
-Route::get('/login', function () {
+Route::get('/login_page', function () {
     return view('login');
 });
 
 Route::post("/login",[UserController::class, 'login']);
-Route::get('/product', [ProductController::class, 'index']);
+Route::get('/', [ProductController::class, 'index']);

@@ -11,7 +11,8 @@ class UserController extends Controller
         if(!$user || !Hash::check($req->password, $user->password)){
             return "username and password doesn't match";
         }else{
-            return redirect('product');
+            $req->session()->put('user', $user);
+            return redirect('/');
         }
     }
 }
