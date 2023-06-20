@@ -15,6 +15,17 @@
         .slider-text{
             color:#1c1c1a !important;
         }
+
+        .trending-image{
+            height: 100px;
+        }
+        .trending-item{
+            float:left;
+            width:20%;
+        }
+        .trending-wrapper{
+            margin:30px;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

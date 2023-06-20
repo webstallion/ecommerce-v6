@@ -24,7 +24,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Cart</a></li>
+        <li><a href="#">Cart(0)</a></li>
       </ul>
     </div>
   </div>
