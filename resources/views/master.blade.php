@@ -15,7 +15,6 @@
         .slider-text{
             color:#1c1c1a !important;
         }
-
         .trending-image{
             height: 100px;
         }
@@ -25,6 +24,9 @@
         }
         .trending-wrapper{
             margin:30px;
+        }
+        .detail-img{
+            height: 200px;
         }
     </style>
     <meta charset="UTF-8">

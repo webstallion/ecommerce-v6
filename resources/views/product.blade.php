@@ -36,11 +36,13 @@
         <h3>Trending Products</h3>
         @foreach($products as $item)
         <div class="trending-item">
-            <img class="trending-image" src="{{$item['gallary']}}">
-            <div class="">
-                <h3>{{$item['name']}}</h3>
-                <p>{{$item['discription']}}</p>
-            </div>
+            <a href="details/{{$item['id']}}">
+                <img class="trending-image" src="{{$item['gallary']}}">
+                <div class="">
+                    <h3>{{$item['name']}}</h3>
+                    <p>{{$item['discription']}}</p>
+                </div>
+            </a>    
         </div>
         @endforeach
     </div>

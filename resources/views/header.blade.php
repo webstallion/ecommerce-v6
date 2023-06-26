@@ -1,3 +1,11 @@
+<?php 
+use App\Http\Controllers\ProductController;
+if(Session::has('user')){
+  $total=ProductController::cartItem();
+}else{
+  $total=0;
+}
+?>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,7 +32,18 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Cart(0)</a></li>
+        <li><a href="#">Cart({{$total}})</a></li>
+        @if(Session::has('user'))
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{Session::get('user')['name']}}
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </li>
+        @else
+          <li><a href="/login_page">Login</a></li>
+        @endif  
       </ul>
     </div>
   </div>
