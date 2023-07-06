@@ -43,9 +43,22 @@ class ProductController extends Controller
         $this->data['products']=DB::table('cart')
         ->join('products', 'cart.product_id', '=', 'products.id')
         ->where('cart.user_id', $userId)
-        ->select('products.*', 'cart.id')
+        ->select('products.*', 'cart.id as cart_id')
         ->get();
-
         return view('cartlist', $this->data);
+    }
+
+    function removeCart($id){
+        Cart::destroy($id);
+        return redirect('cartlist');
+    }
+
+    function orderNow(){
+        $userId=Session::get('user')['id'];
+        $this->data['sum_total_products']=DB::table('cart')
+        ->join('products', 'cart.product_id', '=', 'products.id')
+        ->where('cart.user_id', $userId)
+        ->sum('products.price');
+        return view('ordernow', $this->data);
     }
 }

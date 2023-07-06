@@ -21,11 +21,13 @@
                     </a> 
                 </div>
                 <div class="col-sm-3">
-                    <a href="/removecart/{{$item->id}}" class="btn btn-warning">Remove to cart</a> 
+                    <a href="/removecart/{{$item->cart_id}}" class="btn btn-warning">Remove to cart</a> 
                 </div>  
             </div>
             @endforeach
         </div>
+        <a class="btn btn-success" href="ordernow">Order Now</a>
+        <br><br>
     </div>    
 </div>
 @endsection
