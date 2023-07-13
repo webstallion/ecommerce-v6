@@ -24,15 +24,16 @@
         </table>
     </div>
     <div class="col-sm-10">
-        <form>
+        <form action="/orderplace" method="POST">
+            @csrf;
             <div class="form-group">
-                <textarea class="form-control" placeholder="Enter your address..."></textarea>
+                <textarea class="form-control" name="address" placeholder="Enter your address..."></textarea>
             </div>
             <div class="form-group">
-                <label for="pm">Payment Method</label><br><br>
-                <input type="radio" name="payment">&nbsp;&nbsp;<span>Online Payment</span><br><br>
-                <input type="radio" name="payment">&nbsp;&nbsp;<span>EMI Payment</span><br><br>
-                <input type="radio" name="payment">&nbsp;&nbsp;<span>Payment on Delivery</span><br><br>
+                <label for="pwd">Payment Method</label><br><br>
+                <input type="radio" value="cash" name="payment">&nbsp;&nbsp;<span>Online Payment</span><br><br>
+                <input type="radio" value="cash" name="payment">&nbsp;&nbsp;<span>EMI Payment</span><br><br>
+                <input type="radio" value="cash" name="payment">&nbsp;&nbsp;<span>Payment on Delivery</span><br><br>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>

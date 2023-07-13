@@ -15,4 +15,15 @@ class UserController extends Controller
             return redirect('/');
         }
     }
+
+    function addUser(Request $req){
+        $user = new User;
+        $user->name=$req->username;
+        $user->email=$req->email;
+        $user->password=Hash::make($req->password);
+
+        $user->save();
+        return redirect('/login_page');
+
+    }
 }
